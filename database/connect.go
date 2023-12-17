@@ -10,10 +10,10 @@ import (
 )
 
 const (
-	username = "root"
-	password = "050220"
-	hostname = "127.0.0.1:3306"
-	dbname   = "blogWebsite"
+	username = "sql12670926"
+	password = "Hl1hXXTgQw"
+	hostname = "sql12.freesqldatabase.com"
+	dbname   = "sql12670926"
 )
 
 func dsn(dbName string) string {

@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "a9f7666e-a28f-4cfa-94cb-886907fafabb",
+		"name": "Blogpost",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28688220"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fname\":\"chandan\",\r\n    \"lname\": \"bv\",\r\n    \"password\":\"123456abc\",\r\n    \"email\":\"chadnab@gmail.com\",\r\n    \"phone\":\"7338042598\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/app/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"password\":\"123456abc\",\r\n    \"email\":\"dheeraj01@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/app/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"New Post\",\r\n    \"desc\":\"this is the description\",\r\n    \"image\":\"https://picsum.photos/id/237/200/300\",\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/app/post",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllPost",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/allpost?page=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"allpost"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "detailPost",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/app/allpost/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"allpost",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update post",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"New updated Post\",\r\n    \"desc\":\"this is the description\",\r\n    \"image\":\"https://picsum.photos/id/237/200/300\",\r\n    \"userid\":\"1\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/app/updatepost/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"updatepost",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unique post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletepost",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "imagepost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "C:\\Users\\chand\\Downloads\\IMG20231105112237.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/app/upload-image",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"upload-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
