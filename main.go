@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"os"
 
 	database "github.com/Chandan050/blogwebsite/database"
 	"github.com/Chandan050/blogwebsite/routes"
@@ -14,6 +15,7 @@ func main() {
 
 	app := gin.New()
 	routes.Setup(app)
-	app.Run(":8080")
+	port := os.Getenv("PORT")
+	app.Run(":" + port)
 
 }
